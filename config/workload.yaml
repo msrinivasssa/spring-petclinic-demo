@@ -1,0 +1,13 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: spring-petclinic
+  labels:
+    apps.kubernetes.io/name: spring-petclinic
+    apps.tanzu.vmware.com/workload-type: web
+spec:
+  params:
+    - name: run-image
+      value: gcr.io/advanced-editions-engineering/spring-petclinic
+  source:
+    image: gcr.io/advanced-editions-engineering/spring-petclinic-source
